@@ -1,9 +1,9 @@
 # E & V app
-##Description
+## Description
 The project enables the creation of clients, editing their data, deletion and reading.
 Providing the CRUD functionalities.
 
-##Running Locally
+## Running Locally
 In the project's root directory, run:
 ```
 docker-compose up -d
@@ -17,7 +17,7 @@ docker-compose down
 docker-compose rm
 ```
 
-##API Spec
+## API Spec
 ### Create client
 ```$xslt
 URL: localhost:3000/api/users
@@ -33,13 +33,13 @@ Payload Example:
 }
 Expected Response: This will return a json with the created user
 ``` 
-###To get client by email
+### To get client by email
 ```$xslt
 URL: localhost:3000/api/users/user/<user-email>
 Method: Get
 Expected Response: This will return a json with the user
 ``` 
-###To update client data
+### To update client data
 ```$xslt
 URL: localhost:3000/api/users/update/
 Method: Put
@@ -58,7 +58,7 @@ Payload:
 }
 Expected Response: This will return updated json
 ```
-###To delete a client
+### To delete a client
 ```$xslt
 URL: localhost:3000/api/users/
 Method: Delete
