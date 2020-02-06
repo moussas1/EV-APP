@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - db_data:/data/db
+  ev-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - URL=mongodb://mongo/EV_DB
+    depends_on:
+      - mongo
+volumes:
+  db_data:
